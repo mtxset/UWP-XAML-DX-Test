@@ -1,0 +1,58 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Collections="using:System.Collections"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    x:Class="App2.MainPage"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Left" Width="1150">
+        <Grid x:Name="cPane" PointerMoved="cPane_PointerMoved">
+            
+        </Grid>
+        <TextBlock x:Name="clouds_box" HorizontalAlignment="Left" Margin="88,299,0,0" TextWrapping="Wrap" Text="Sunny" VerticalAlignment="Top" Height="48" Width="271" FontSize="18" Foreground="#FF4854C3" FontWeight="Bold"/>
+        <TextBlock x:Name="temp_box" HorizontalAlignment="Left" Margin="83,389,0,0" TextWrapping="Wrap" Text="Temp" VerticalAlignment="Top" Height="48" Width="271" FontSize="18"/>
+        <TextBlock x:Name="time_box" HorizontalAlignment="Left" Margin="33,187,0,0" TextWrapping="Wrap" Text="Local Time                    " VerticalAlignment="Top" Height="72" Width="271" FontSize="18"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="178" Margin="359,187,0,0" VerticalAlignment="Top" Width="178" NineGrid="1" Source="Assets/sun.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="76" Margin="28,361,0,0" VerticalAlignment="Top" Width="65" Source="Assets/thermometer-1.png" RenderTransformOrigin="0.535,0.592"/>
+        <TextBlock x:Name="temp_box_max" HorizontalAlignment="Left" Margin="83,470,0,0" TextWrapping="Wrap" Text="Temp" VerticalAlignment="Top" Height="48" Width="271" FontSize="18"/>
+        <TextBlock x:Name="temp_box_min" HorizontalAlignment="Left" Margin="83,546,0,0" TextWrapping="Wrap" Text="Temp" VerticalAlignment="Top" Height="48" Width="271" FontSize="18"/>
+        <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="76" Margin="28,437,0,0" VerticalAlignment="Top" Width="65" Source="Assets/thermometer-2.png" RenderTransformOrigin="0.535,0.592" ToolTipService.ToolTip="Max Temp"/>
+        <Image x:Name="image1_Copy1" HorizontalAlignment="Left" Height="76" Margin="28,513,0,0" VerticalAlignment="Top" Width="65" Source="Assets/thermometer.png" RenderTransformOrigin="0.535,0.592" ToolTipService.ToolTip="Min Temp"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="700" Margin="588,12,0,0" VerticalAlignment="Top" Width="522" CornerRadius="10">
+            <Grid x:Name ="fGrid" Loaded="Grid_Loaded">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="522"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+        <TextBlock x:Name="humidity_box" HorizontalAlignment="Left" Margin="88,608,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="271" FontSize="18">
+            <Run Text="Humidity"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <Image x:Name="image1_Copy2" HorizontalAlignment="Left" Height="53" Margin="33,589,0,0" VerticalAlignment="Top" Width="60" Source="Assets/raindrop.png" RenderTransformOrigin="0.535,0.592" ToolTipService.ToolTip="Humidity"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="210,110,0,0" VerticalAlignment="Top" Width="144" SelectionChanged="comboBox_SelectionChanged_1">
+            <x:String>Vilnius</x:String>
+            <x:String>Berlin</x:String>
+            <x:String>London</x:String>
+            <x:String>Kiev</x:String>
+            <x:String>Stockholm</x:String>
+        </ComboBox>
+        <Border BorderBrush="#FF424438" BorderThickness="1" HorizontalAlignment="Left" Height="700" Margin="10,10,0,0" VerticalAlignment="Top" Width="553" CornerRadius="10">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Today in Kiev" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Foreground="#FF389723" Height="69" Width="533" Margin="9,9,0,0"/>
+        </Border>
+        
+    </Grid>
+</Page>
